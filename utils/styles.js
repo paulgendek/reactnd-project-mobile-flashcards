@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native'
-import { purple, white, red } from './colors'
+import { purple, white, red, gray } from './colors'
 
 export const globalStyles = StyleSheet.create({
   container: {
@@ -54,5 +54,10 @@ export const globalStyles = StyleSheet.create({
   },
   redBackground: {
     backgroundColor: red
+  },
+  textInput: {
+    height: 40,
+    borderColor: gray,
+    borderWidth: 1,
   }
 })

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, Text, TextInput } from 'react-native'
+import { Text, TextInput, KeyboardAvoidingView } from 'react-native'
 import { connect } from 'react-redux'
 import { addDeck } from '../actions'
 import { saveDeckTitle } from '../utils/api'
@@ -13,6 +13,7 @@ class NewDeck extends Component {
   }
 
   addCards = (title) => {
+    // go directly to the new Deck view to start adding cards
     this.props.navigation.dispatch(NavigationActions.navigate({
       routeName: 'Deck',
       params: {
@@ -45,17 +46,17 @@ class NewDeck extends Component {
 
   render() {
     return (
-      <View style={globalStyles.container}>
+      <KeyboardAvoidingView style={globalStyles.container} behavior={'padding'}>
         <Text>What is the title of your new deck?</Text>
         <TextInput
-            style={{height: 40, borderColor: 'gray', borderWidth: 1}}
+            style={globalStyles.textInput}
             onChangeText={(title) => this.setState({title})}
             value={this.state.title}
             placeholder={'Deck Title'}
             autoFocus
         />
         <SubmitBtn onPress={this.submit} value={'Create Deck'} />
-      </View>
+      </KeyboardAvoidingView>
     )
   }
 }

@@ -14,6 +14,7 @@ Runs the app in development mode.
 
 Open it in the [Expo app](https://expo.io) on your phone to view it.
 
-## Compatibility
+## Mobile Platforms Tested
 
-Tested on iOS Simulator (iPhone 8) and Samsung Galaxy S7
+- iOS Simulator (iPhone 8)
+- Samsung Galaxy S7
